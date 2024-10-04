@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <!-- Registration Form -->
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateRegistrationForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><span class="error" id="nameError"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><span class="error" id="emailError"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><span class="error" id="passwordError"></span><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><span class="error" id="confirmPasswordError"></span><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100"><span class="error" id="ageError"></span><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"> Male
+        <input type="radio" id="female" name="gender" value="Female"> Female<span class="error" id="genderError"></span><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">Select Country</option>
+            <option value="Kenya">Kenya</option>
+            <option value="USA">USA</option>
+        
+        </select><span class="error" id="countryError"></span><br>
+
+        <label>
+            <input type="checkbox" id="terms" name="terms"> I agree to the terms and conditions
+        </label><span class="error" id="termsError"></span><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    </div>
+    <br><br>
+
+    <!-- Login Form -->
+   <div class="login-form">
+    <h2>Login Form</h2>
+    <form id="loginForm" onsubmit="return validateLoginForm()">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail"><span class="error" id="loginEmailError"></span><br>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword"><span class="error" id="loginPasswordError"></span><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+   </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
